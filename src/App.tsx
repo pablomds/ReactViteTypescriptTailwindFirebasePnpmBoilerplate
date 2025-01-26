@@ -1,13 +1,13 @@
-import { Routes, Route } from "react-router";
-
-import Home from './Pages/HomePage'
+import { Routes } from "react-router";
+import  { PublicRoutes, PrivateRoutes} from "./Routes/Routes";
 import './App.css';
 
 function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
+      {PublicRoutes()}
+      {PrivateRoutes()}
     </Routes>
   )
 }

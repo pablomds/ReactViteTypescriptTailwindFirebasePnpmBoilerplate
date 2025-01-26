@@ -2,8 +2,8 @@ import { useEffect, useState, ReactNode } from "react"
 import { Outlet } from 'react-router'
 
 interface ILoggedLayout {
-    children: ReactNode,
-    currentUser: any | undefined
+    children?: ReactNode,
+    currentUser?: any | undefined
 };
 const LoggedLayout = ({ children, currentUser } : ILoggedLayout) => {
   const [isLoading, setIsLoading] = useState(false);

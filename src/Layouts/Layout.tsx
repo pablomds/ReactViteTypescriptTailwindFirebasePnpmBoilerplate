@@ -1,13 +1,13 @@
 import { ReactNode } from "react"
-import HomePage from "../Pages/HomePage"
 import { Outlet } from 'react-router'
 
 interface ILogged {
-    children: ReactNode,
+    children?: ReactNode,
 };
 
-const Layout = ({ children }: ILogged) => {
-  return <div>{children ? children : <Outlet />}</div>;
+const Layout = (props: ILogged) => {
+  console.log('layout')
+  return <div>{props.children ? props.children : <Outlet />}</div>;
 };
 
 export default Layout
